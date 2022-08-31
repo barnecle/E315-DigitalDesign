@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_bitflip_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi4stream_vip_pkg" />
+            <top_module name="glbl" />
+            <top_module name="tb_bitflip" />
+            <top_module name="xil_common_vip_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="415664fs"></ZoomStartTime>
+      <ZoomEndTime time="994665fs"></ZoomEndTime>
+      <Cursor1Time time="810000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="120"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="19" />
+   <wvobject type="array" fp_name="/tb_bitflip/i">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_bitflip/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_bitflip/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_bitflip/test_write_data">
+      <obj_property name="ElementShortName">test_write_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">test_write_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_bitflip/test_read_data">
+      <obj_property name="ElementShortName">test_read_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">test_read_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_bitflip/DUT/bd_bitflip_i/axis_bitflip_0/ACLK">
+      <obj_property name="ElementShortName">ACLK</obj_property>
+      <obj_property name="ObjectShortName">ACLK</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_bitflip/DUT/bd_bitflip_i/axis_bitflip_0/ARESETN">
+      <obj_property name="ElementShortName">ARESETN</obj_property>
+      <obj_property name="ObjectShortName">ARESETN</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_bitflip/DUT/bd_bitflip_i/axis_bitflip_0/S_AXIS_TDATA">
+      <obj_property name="ElementShortName">S_AXIS_TDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_TDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_bitflip/DUT/bd_bitflip_i/axis_bitflip_0/S_AXIS_TKEEP">
+      <obj_property name="ElementShortName">S_AXIS_TKEEP[3:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_TKEEP[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_bitflip/DUT/bd_bitflip_i/axis_bitflip_0/S_AXIS_TLAST">
+      <obj_property name="ElementShortName">S_AXIS_TLAST</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_TLAST</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_bitflip/DUT/bd_bitflip_i/axis_bitflip_0/S_AXIS_TVALID">
+      <obj_property name="ElementShortName">S_AXIS_TVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_TVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_bitflip/DUT/bd_bitflip_i/axis_bitflip_0/S_AXIS_TREADY">
+      <obj_property name="ElementShortName">S_AXIS_TREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_TREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_bitflip/DUT/bd_bitflip_i/axis_bitflip_0/M_AXIS_TDATA">
+      <obj_property name="ElementShortName">M_AXIS_TDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_bitflip/DUT/bd_bitflip_i/axis_bitflip_0/M_AXIS_TKEEP">
+      <obj_property name="ElementShortName">M_AXIS_TKEEP[3:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TKEEP[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_bitflip/DUT/bd_bitflip_i/axis_bitflip_0/M_AXIS_TLAST">
+      <obj_property name="ElementShortName">M_AXIS_TLAST</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TLAST</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_bitflip/DUT/bd_bitflip_i/axis_bitflip_0/M_AXIS_TVALID">
+      <obj_property name="ElementShortName">M_AXIS_TVALID</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_bitflip/DUT/bd_bitflip_i/axis_bitflip_0/M_AXIS_TREADY">
+      <obj_property name="ElementShortName">M_AXIS_TREADY</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TREADY</obj_property>
+   </wvobject>
+   <wvobject type="protoinst" fp_name="/tb_bitflip/DUT/bd_bitflip_i/axis_bitflip_0/M_AXIS">
+      <obj_property name="ElementShortName">M_AXIS</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS</obj_property>
+   </wvobject>
+   <wvobject type="protoinst" fp_name="/tb_bitflip/DUT/bd_bitflip_i/axis_bitflip_0/S_AXIS">
+      <obj_property name="ElementShortName">S_AXIS</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS</obj_property>
+   </wvobject>
+</wave_config>

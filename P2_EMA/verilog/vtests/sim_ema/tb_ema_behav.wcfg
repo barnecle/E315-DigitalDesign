@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_ema_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi4stream_vip_pkg" />
+            <top_module name="glbl" />
+            <top_module name="tb_ema" />
+            <top_module name="xil_common_vip_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="469991fs"></ZoomStartTime>
+      <ZoomEndTime time="470003fs"></ZoomEndTime>
+      <Cursor1Time time="470001fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="120"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="18" />
+   <wvobject type="array" fp_name="/tb_ema/i">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ema/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ema/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ema/test_write_data">
+      <obj_property name="ElementShortName">test_write_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">test_write_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ema/test_read_data">
+      <obj_property name="ElementShortName">test_read_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">test_read_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ema/last_read_data">
+      <obj_property name="ElementShortName">last_read_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">last_read_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ema/DUT/bd_ema_i/axis_ema_0/inst/ACLK">
+      <obj_property name="ElementShortName">ACLK</obj_property>
+      <obj_property name="ObjectShortName">ACLK</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ema/DUT/bd_ema_i/axis_ema_0/inst/ARESETN">
+      <obj_property name="ElementShortName">ARESETN</obj_property>
+      <obj_property name="ObjectShortName">ARESETN</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ema/DUT/bd_ema_i/axis_ema_0/inst/S_AXIS_TDATA">
+      <obj_property name="ElementShortName">S_AXIS_TDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_TDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ema/DUT/bd_ema_i/axis_ema_0/inst/S_AXIS_TKEEP">
+      <obj_property name="ElementShortName">S_AXIS_TKEEP[3:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_TKEEP[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ema/DUT/bd_ema_i/axis_ema_0/inst/S_AXIS_TLAST">
+      <obj_property name="ElementShortName">S_AXIS_TLAST</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_TLAST</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ema/DUT/bd_ema_i/axis_ema_0/inst/S_AXIS_TVALID">
+      <obj_property name="ElementShortName">S_AXIS_TVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_TVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ema/DUT/bd_ema_i/axis_ema_0/inst/S_AXIS_TREADY">
+      <obj_property name="ElementShortName">S_AXIS_TREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_TREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ema/DUT/bd_ema_i/axis_ema_0/inst/M_AXIS_TDATA">
+      <obj_property name="ElementShortName">M_AXIS_TDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_ema/DUT/bd_ema_i/axis_ema_0/inst/M_AXIS_TKEEP">
+      <obj_property name="ElementShortName">M_AXIS_TKEEP[3:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TKEEP[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ema/DUT/bd_ema_i/axis_ema_0/inst/M_AXIS_TLAST">
+      <obj_property name="ElementShortName">M_AXIS_TLAST</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TLAST</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ema/DUT/bd_ema_i/axis_ema_0/inst/M_AXIS_TVALID">
+      <obj_property name="ElementShortName">M_AXIS_TVALID</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_ema/DUT/bd_ema_i/axis_ema_0/inst/M_AXIS_TREADY">
+      <obj_property name="ElementShortName">M_AXIS_TREADY</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TREADY</obj_property>
+   </wvobject>
+</wave_config>
