@@ -25,7 +25,8 @@ ema(PyObject *self, PyObject *args)
         return NULL;
     
     //FIXME
-    uint32_t res = 0; 
+	
+    uint32_t res = ema_simple(num); 
     
     return PyLong_FromLong(res);
 }
@@ -58,9 +59,15 @@ ema_all(PyObject *self, PyObject *args)
     y_lst = PyList_New(sz);
 
     //reset ema
-    ema_reset();
+    for(int i = 0; i<sz; i++){
+		
+		ema_reset();
+		y_list(i) = ema_simple(x_list(i));
+	}
     
     //FIXME
+	
+	
 
     return y_lst;
 }
