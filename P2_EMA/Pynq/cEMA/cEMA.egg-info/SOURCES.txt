@@ -1,0 +1,7 @@
+cEMA.c
+ema.c
+setup.py
+cEMA.egg-info/PKG-INFO
+cEMA.egg-info/SOURCES.txt
+cEMA.egg-info/dependency_links.txt
+cEMA.egg-info/top_level.txt
