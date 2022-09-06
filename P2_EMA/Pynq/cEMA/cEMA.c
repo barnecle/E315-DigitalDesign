@@ -64,6 +64,7 @@ ema_all(PyObject *self, PyObject *args)
 		ema_reset();
 
 		PyObject* item = PyList_GetItem(x_lst, i);
+		printf("%p", &item);
 		PyList_SetItem(y_lst, i, ema(x_lst, item));
 	}
     
