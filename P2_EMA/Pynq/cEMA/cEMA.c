@@ -57,19 +57,24 @@ ema_all(PyObject *self, PyObject *args)
    
     //create the output list
     y_lst = PyList_New(sz);
-
+    ema_reset();
+    PyObject* ret;
+    unsigned long val;
     //reset ema
-    for(u_int32_t i = 0; i<sz; i++){
+    for(uint32_t i = 0; i<sz; i++){
 		
-		ema_reset();
+	
 
 		PyObject* item = PyList_GetItem(x_lst, i);
-		printf("%p", &item);
-		PyList_SetItem(y_lst, i, ema(x_lst, item));
+		//	printf("%p", &item);
+		val = PyLong_AsLong(item);
+		val = ema_simple((uint32_t) val);
+	        ret = PyLong_FromLong(val);
+		PyList_SetItem(y_lst, i, ret);
 	}
     
     //FIXME
-	
+
 	
 
     return y_lst;
