@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Sep 22 17:16:23 2022
+# Process ID: 79003
+# Current directory: /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/vivado_project/vivado_project.runs/impl_1
+# Command line: vivado -log design_fpga_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_fpga_wrapper.tcl -notrace
+# Log file: /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/vivado_project/vivado_project.runs/impl_1/design_fpga_wrapper.vdi
+# Journal file: /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/vivado_project/vivado_project.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source design_fpga_wrapper.tcl -notrace

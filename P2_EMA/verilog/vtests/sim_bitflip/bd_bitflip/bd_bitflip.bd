@@ -1,12 +1,13 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x67165F2371CD9A96",
+      "boundary_crc": "0x67165F2370FC145B",
       "device": "xc7z020clg400-1",
       "name": "bd_bitflip",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "None",
-      "tool_version": "2020.2"
+      "tool_version": "2020.2",
+      "validated": "true"
     },
     "design_tree": {
       "axis_bitflip_0": "",
@@ -16,17 +17,55 @@
     "ports": {
       "ACLK_0": {
         "type": "clk",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "ARESETN_0",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "bd_bitflip_ACLK_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
       },
       "ARESETN_0": {
         "type": "rst",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       }
     },
     "components": {
       "axis_bitflip_0": {
         "vlnv": "xilinx.com:module_ref:axis_bitflip:1.0",
         "xci_name": "bd_bitflip_axis_bitflip_0_0",
+        "xci_path": "ip/bd_bitflip_axis_bitflip_0_0/bd_bitflip_axis_bitflip_0_0.xci",
+        "inst_hier_path": "axis_bitflip_0",
         "reference_info": {
           "ref_type": "hdl",
           "ref_name": "axis_bitflip",
@@ -204,6 +243,8 @@
       "axi4stream_vip_0": {
         "vlnv": "xilinx.com:ip:axi4stream_vip:1.1",
         "xci_name": "bd_bitflip_axi4stream_vip_0_0",
+        "xci_path": "ip/bd_bitflip_axi4stream_vip_0_0/bd_bitflip_axi4stream_vip_0_0.xci",
+        "inst_hier_path": "axi4stream_vip_0",
         "parameters": {
           "HAS_TKEEP": {
             "value": "0"
@@ -237,6 +278,8 @@
       "axi4stream_vip_1": {
         "vlnv": "xilinx.com:ip:axi4stream_vip:1.1",
         "xci_name": "bd_bitflip_axi4stream_vip_1_0",
+        "xci_path": "ip/bd_bitflip_axi4stream_vip_1_0/bd_bitflip_axi4stream_vip_1_0.xci",
+        "inst_hier_path": "axi4stream_vip_1",
         "parameters": {
           "INTERFACE_MODE": {
             "value": "SLAVE"
@@ -245,16 +288,16 @@
       }
     },
     "interface_nets": {
-      "axi4stream_vip_0_M_AXIS": {
-        "interface_ports": [
-          "axi4stream_vip_0/M_AXIS",
-          "axis_bitflip_0/S_AXIS"
-        ]
-      },
       "axis_bitflip_0_M_AXIS": {
         "interface_ports": [
           "axi4stream_vip_1/S_AXIS",
           "axis_bitflip_0/M_AXIS"
+        ]
+      },
+      "axi4stream_vip_0_M_AXIS": {
+        "interface_ports": [
+          "axi4stream_vip_0/M_AXIS",
+          "axis_bitflip_0/S_AXIS"
         ]
       }
     },

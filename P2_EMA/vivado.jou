@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Sep 22 17:10:47 2022
+# Process ID: 75370
+# Current directory: /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA
+# Command line: vivado vivado_project/vivado_project.xpr
+# Log file: /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/vivado.log
+# Journal file: /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project vivado_project/vivado_project.xpr
+update_compile_order -fileset sim_bitflip
+update_compile_order -fileset sim_ema
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_run impl_1

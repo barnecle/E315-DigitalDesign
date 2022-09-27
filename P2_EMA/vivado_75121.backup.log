@@ -1,0 +1,170 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Sep 22 17:09:40 2022
+# Process ID: 75121
+# Current directory: /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA
+# Command line: vivado -mode batch -source tcl/setup.tcl
+# Log file: /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/vivado.log
+# Journal file: /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/vivado.jou
+#-----------------------------------------------------------
+source tcl/setup.tcl
+# set MYFILE [file normalize [info script]]
+# set MYDIR  [file dirname ${MYFILE}]
+# set BASEDIR ${MYDIR}/../
+# set SRCDIR ${MYDIR}/../verilog/vsrc/
+# set TESTDIR ${MYDIR}/../verilog/vtests/ 
+# create_project -force vivado_project.xpr ${BASEDIR}/vivado_project -part xc7z020clg400-1
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 2349.215 ; gain = 0.023 ; free physical = 25125 ; free virtual = 30896
+# add_files [glob ${SRCDIR}/*.v]
+# add_files [glob ${SRCDIR}/*.sv]
+# add_files ${SRCDIR}/design_fpga/design_fpga.bd
+WARNING: [BD 41-2576] File '/nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/ip/design_fpga_processing_system7_0_0/design_fpga_processing_system7_0_0.xci' referenced by design 'design_fpga' could not be found.
+WARNING: [BD 41-2576] File '/nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/ip/design_fpga_axis_bitflip_0_0/design_fpga_axis_bitflip_0_0.xci' referenced by design 'design_fpga' could not be found.
+WARNING: [BD 41-2576] File '/nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/ip/design_fpga_axi_dma_0_0/design_fpga_axi_dma_0_0.xci' referenced by design 'design_fpga' could not be found.
+WARNING: [BD 41-2576] File '/nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/ip/design_fpga_xbar_1/design_fpga_xbar_1.xci' referenced by design 'design_fpga' could not be found.
+WARNING: [BD 41-2576] File '/nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/ip/design_fpga_auto_pc_0/design_fpga_auto_pc_0.xci' referenced by design 'design_fpga' could not be found.
+WARNING: [BD 41-2576] File '/nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/ip/design_fpga_ps7_0_axi_periph_0/design_fpga_ps7_0_axi_periph_0.xci' referenced by design 'design_fpga' could not be found.
+WARNING: [BD 41-2576] File '/nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/ip/design_fpga_rst_ps7_0_100M_0/design_fpga_rst_ps7_0_100M_0.xci' referenced by design 'design_fpga' could not be found.
+WARNING: [BD 41-2576] File '/nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/ip/design_fpga_xbar_0/design_fpga_xbar_0.xci' referenced by design 'design_fpga' could not be found.
+WARNING: [BD 41-2576] File '/nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/ip/design_fpga_auto_us_0/design_fpga_auto_us_0.xci' referenced by design 'design_fpga' could not be found.
+WARNING: [BD 41-2576] File '/nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/ip/design_fpga_auto_us_1/design_fpga_auto_us_1.xci' referenced by design 'design_fpga' could not be found.
+WARNING: [BD 41-2576] File '/nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/ip/design_fpga_auto_pc_1/design_fpga_auto_pc_1.xci' referenced by design 'design_fpga' could not be found.
+WARNING: [BD 41-2576] File '/nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/ip/design_fpga_axi_mem_intercon_0/design_fpga_axi_mem_intercon_0.xci' referenced by design 'design_fpga' could not be found.
+WARNING: [BD 41-2576] File '/nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/ip/design_fpga_axis_ema_0_0/design_fpga_axis_ema_0_0.xci' referenced by design 'design_fpga' could not be found.
+WARNING: [BD 41-2576] File '/nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/ip/design_fpga_axi_dma_0_1/design_fpga_axi_dma_0_1.xci' referenced by design 'design_fpga' could not be found.
+WARNING: [BD 41-2576] File '/nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/ip/design_fpga_system_ila_0_0/design_fpga_system_ila_0_0.xci' referenced by design 'design_fpga' could not be found.
+# make_wrapper -files [get_files *.bd] -top
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_fpga_processing_system7_0_0 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ARESETN' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ACLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'ARESETN': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'M_AXIS'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ACLK': Added interface parameter 'ASSOCIATED_RESET' with value 'ARESETN'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [BD 41-1728] Could not find a module with name: design_fpga_axis_bitflip_0_0 
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_fpga_axi_dma_0_0 
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_fpga_ps7_0_axi_periph_0 
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_fpga_xbar_1 
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_fpga_auto_pc_0 
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_fpga_rst_ps7_0_100M_0 
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_fpga_axi_mem_intercon_0 
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_fpga_auto_us_0 
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_fpga_auto_us_1 
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_fpga_auto_pc_1 
+INFO: [IP_Flow 19-5107] Inferred bus interface 'M_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'S_AXIS' of definition 'xilinx.com:interface:axis:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ARESETN' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'ACLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'ARESETN': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ACLK': Added interface parameter 'ASSOCIATED_BUSIF' with value 'M_AXIS'.
+INFO: [IP_Flow 19-4728] Bus Interface 'ACLK': Added interface parameter 'ASSOCIATED_RESET' with value 'ARESETN'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [BD 41-1728] Could not find a module with name: design_fpga_axis_ema_0_0 
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_fpga_axi_dma_0_1 
+INFO: [BD 41-434] Could not find an IP with XCI file by name: design_fpga_system_ila_0_0 
+INFO: [BD 41-433] 
+Design successfully migrated to use XCI files...
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+Wrote  : </nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/design_fpga.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+VHDL Output written to : /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/synth/design_fpga.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+VHDL Output written to : /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/sim/design_fpga.v
+VHDL Output written to : /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/hdl/design_fpga_wrapper.v
+make_wrapper: Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 2517.426 ; gain = 168.211 ; free physical = 24607 ; free virtual = 30441
+# add_files ${SRCDIR}/design_fpga/hdl/design_fpga_wrapper.v 
+# create_fileset -simset sim_bitflip
+# add_files -fileset sim_bitflip ${TESTDIR}/sim_bitflip/tb_bitflip.sv
+# add_files -fileset sim_bitflip ${TESTDIR}/sim_bitflip/bd_bitflip/bd_bitflip.bd
+# make_wrapper -files [get_files *.bd] -top
+INFO: [BD 41-1662] The design 'design_fpga.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+VHDL Output written to : /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/synth/design_fpga.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+VHDL Output written to : /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/sim/design_fpga.v
+VHDL Output written to : /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/hdl/design_fpga_wrapper.v
+INFO: [BD 41-1728] Could not find a module with name: bd_bitflip_axis_bitflip_0_0 
+INFO: [BD 41-434] Could not find an IP with XCI file by name: bd_bitflip_axi4stream_vip_0_0 
+INFO: [BD 41-434] Could not find an IP with XCI file by name: bd_bitflip_axi4stream_vip_1_0 
+INFO: [BD 41-433] 
+Design successfully migrated to use XCI files...
+Wrote  : </nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vtests/sim_bitflip/bd_bitflip/bd_bitflip.bd> 
+VHDL Output written to : /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vtests/sim_bitflip/bd_bitflip/synth/bd_bitflip.v
+VHDL Output written to : /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vtests/sim_bitflip/bd_bitflip/sim/bd_bitflip.v
+VHDL Output written to : /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vtests/sim_bitflip/bd_bitflip/hdl/bd_bitflip_wrapper.v
+# add_files -fileset sim_bitflip ${TESTDIR}/sim_bitflip/bd_bitflip/hdl/bd_bitflip_wrapper.v
+# add_files -fileset sim_bitflip ${TESTDIR}/sim_bitflip/tb_bitflip_behav.wcfg
+# set_property top tb_bitflip [get_filesets sim_bitflip]
+# create_fileset -simset sim_ema
+# add_files -fileset sim_ema ${TESTDIR}/sim_ema/tb_ema.sv
+# add_files -fileset sim_ema ${TESTDIR}/sim_ema/bd_ema/bd_ema.bd
+# make_wrapper -files [get_files *.bd] -top
+INFO: [BD 41-1662] The design 'design_fpga.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+VHDL Output written to : /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/synth/design_fpga.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+VHDL Output written to : /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/sim/design_fpga.v
+VHDL Output written to : /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vsrc/design_fpga/hdl/design_fpga_wrapper.v
+INFO: [BD 41-1662] The design 'bd_bitflip.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vtests/sim_bitflip/bd_bitflip/synth/bd_bitflip.v
+VHDL Output written to : /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vtests/sim_bitflip/bd_bitflip/sim/bd_bitflip.v
+VHDL Output written to : /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vtests/sim_bitflip/bd_bitflip/hdl/bd_bitflip_wrapper.v
+INFO: [BD 41-434] Could not find an IP with XCI file by name: bd_ema_axi4stream_vip_0_0 
+INFO: [BD 41-434] Could not find an IP with XCI file by name: bd_ema_axi4stream_vip_1_0 
+INFO: [BD 41-1728] Could not find a module with name: bd_ema_axis_ema_0_0 
+INFO: [BD 41-433] 
+Design successfully migrated to use XCI files...
+Wrote  : </nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vtests/sim_ema/bd_ema/bd_ema.bd> 
+VHDL Output written to : /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vtests/sim_ema/bd_ema/synth/bd_ema.v
+VHDL Output written to : /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vtests/sim_ema/bd_ema/sim/bd_ema.v
+VHDL Output written to : /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/verilog/vtests/sim_ema/bd_ema/hdl/bd_ema_wrapper.v
+make_wrapper: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2557.445 ; gain = 0.000 ; free physical = 24580 ; free virtual = 30415
+# add_files -fileset sim_ema ${TESTDIR}/sim_ema/bd_ema/hdl/bd_ema_wrapper.v
+# add_files -fileset sim_ema ${TESTDIR}/sim_ema/tb_ema_behav.wcfg
+# set_property top tb_ema [get_filesets sim_ema]
+# create_fileset -simset sim_ema2
+# add_files -fileset sim_ema2 ${TESTDIR}/sim_ema2/ema_tb.sv 
+# set_property top ema_tb [get_filesets sim_ema2]
+# set_property file_type SystemVerilog [get_files *.sv]
+# set_property top design_fpga_wrapper [current_fileset]
+# current_fileset -simset [ get_filesets sim_bitflip]
+# set_property -name {xsim.simulate.runtime} -value {1000us} -objects [get_filesets sim_*]
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 22 17:10:30 2022...

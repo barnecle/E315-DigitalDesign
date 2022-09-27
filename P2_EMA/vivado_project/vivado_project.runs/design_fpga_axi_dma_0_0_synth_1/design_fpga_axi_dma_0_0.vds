@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Sep 22 17:14:51 2022
+# Process ID: 78420
+# Current directory: /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/vivado_project/vivado_project.runs/design_fpga_axi_dma_0_0_synth_1
+# Command line: vivado -log design_fpga_axi_dma_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_fpga_axi_dma_0_0.tcl
+# Log file: /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/vivado_project/vivado_project.runs/design_fpga_axi_dma_0_0_synth_1/design_fpga_axi_dma_0_0.vds
+# Journal file: /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/vivado_project/vivado_project.runs/design_fpga_axi_dma_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_fpga_axi_dma_0_0.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_fpga_axi_dma_0_0, cache-ID = df174d3d67a11090.
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 22 17:15:07 2022...

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Sep 22 17:09:40 2022
+# Process ID: 75121
+# Current directory: /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA
+# Command line: vivado -mode batch -source tcl/setup.tcl
+# Log file: /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/vivado.log
+# Journal file: /nfs/nfs2/home/barnecle/E315-Digital-Design/P2_EMA/vivado.jou
+#-----------------------------------------------------------
+source tcl/setup.tcl

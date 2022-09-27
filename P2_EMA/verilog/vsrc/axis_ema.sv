@@ -38,8 +38,25 @@ module axis_ema_sv(
 
     );
 
+    reg [31:0] old_y;
+    reg [31:0] new_y;
+    
+    always_ff @(posedge ACLK) begin
+        
+        if (~ARESETN) begin
+            old_y <= 1000;
+        end
+        else if (S_AXIS_TVALID && M_AXIS_TREADY) begin
+            old_y <= new_y;
+        end
+        
+    end
+    
+    always_comb begin   
+        new_y = (S_AXIS_TDATA>>2) + (old_y>>2) + (old_y>>1);
+    end 
     //Update me!  By default this does nothing!   
-    assign M_AXIS_TDATA = ~S_AXIS_TDATA; 
+    assign M_AXIS_TDATA = new_y; 
 
     assign M_AXIS_TKEEP = S_AXIS_TKEEP;
     assign M_AXIS_TLAST = S_AXIS_TLAST;
