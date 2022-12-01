@@ -1,0 +1,9 @@
+*.swp
+*.swo
+*.bda
+*.bxml
+*.jou
+*.log
+*.str
+vivado_project
+NA

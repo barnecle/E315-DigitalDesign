@@ -1,0 +1,17 @@
+*.swp
+*.swo
+*.bda
+*.bxml
+*.jou
+*.log
+*.str
+vivado_project
+NA
+verilog/vsrc/bd_*/hwh
+verilog/vsrc/bd_*/ip
+verilog/vsrc/bd_*/hdl
+verilog/vsrc/bd_*/sim
+verilog/vsrc/bd_*/hw_handoff
+verilog/vsrc/bd_*/synth
+verilog/vsrc/bd_*/ipshared
+verilog/vsrc/bd_*/*.xdc
