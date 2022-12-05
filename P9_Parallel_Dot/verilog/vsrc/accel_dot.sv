@@ -45,83 +45,162 @@ module accel_dot #(
         $error("COLS must be even"); 
     
     genvar i;
-//    if ((COLS%4) == 0) begin
-//        wire [31:0] weights0 [0:ROWS-1][0 :+ COLS/4-1];
-//        wire [31:0] weights1 [0:ROWS-1][0 :+ COLS/4-1];
-//        wire [31:0] weights2 [0:ROWS-1][0 :+ COLS/4-1];
-//        wire [31:0] weights3 [0:ROWS-1][0 :+ COLS/4-1];
-//        for (i = 0; i < ROWS; ++i) begin
-//            assign weights0[i] = weights[i][0       : COLS/4-1  ];
-//            assign weights1[i] = weights[i][COLS/4  : ((COLS/4)*2-1)   ];
-//            assign weights2[i] = weights[i][(COLS/4)*2       : (COLS/4)*3-1  ];
-//            assign weights3[i] = weights[i][(COLS/4)*3  : COLS-1    ];
-//        end
-        
-//        dot #(
-//        .ROWS(ROWS),
-//        .COLS((COLS/2))
-        
-//        ) dot0 (
     
-//		// AXI4-Stream Interface
-//		.clk(clk),
-//		.rst(rst),
-		
-//		.MATRIX_NUM(4),
-//		.weights0(weights0),
-//		.weights1(weights1),
-//		.weights2(weights2),
-//		.weights3(weights3),
-		
-//        .INPUT_AXIS_TDATA(INPUT_AXIS_TDATA),
-//        .INPUT_AXIS_TLAST(INPUT_AXIS_TLAST),
-//        .INPUT_AXIS_TVALID(INPUT_AXIS_TVALID),
-//        .INPUT_AXIS_TREADY(INPUT_AXIS_TREADY),
-                            
-//        .OUTPUT_AXIS_TDATA(OUTPUT_AXIS_TDATA),
-//        .OUTPUT_AXIS_TLAST(OUTPUT_AXIS_TLAST),
-//        .OUTPUT_AXIS_TVALID(OUTPUT_AXIS_TVALID),
-//        .OUTPUT_AXIS_TREADY(OUTPUT_AXIS_TREADY) 	
+//    assign reg MODNUM = 2;
+    logic [31:0]  j, next_j;
+    logic [31:0] outbuf [0:1];
+    logic tvalid [0:1];
+    logic in_tready[0:1];
+    logic tready[0:1];
+    logic tlast[0:1]; //throw away
+    logic [31:0] n, next_n;
+    logic both_ready;
+    
+    enum {ST_IDLE, ST_RUN, ST_OUTPUT} state, next_state;
+    
+    
+    wire [31:0] weights0 [0:ROWS-1][0 :+ COLS/2-1];
+    wire [31:0] weights1 [0:ROWS-1][0 :+ COLS/2-1];
+    
+    //logic [31:0] outputs [0:COLS-1];
+    for (i = 0; i < ROWS; ++i) begin
+        assign weights0[i] = weights[i][0       : COLS/2-1  ];
+        assign weights1[i] = weights[i][COLS/2  : COLS-1    ];
+    end
+    
+    
+    dot #(
+    .ROWS(ROWS),
+    .COLS((COLS/2))
+    
+    ) dot0 (
 
-//        );
-//    end else begin
-        wire [31:0] weights0 [0:ROWS-1][0 :+ COLS/2-1];
-        wire [31:0] weights1 [0:ROWS-1][0 :+ COLS/2-1];
-        for (i = 0; i < ROWS; ++i) begin
-            assign weights0[i] = weights[i][0       : COLS/2-1  ];
-            assign weights1[i] = weights[i][COLS/2  : COLS-1    ];
+    // AXI4-Stream Interface
+      .clk(clk),
+      .rst(rst),
+    
+
+      .weights(weights0),
+      
+    
+      .INPUT_AXIS_TDATA(INPUT_AXIS_TDATA),
+      .INPUT_AXIS_TLAST(INPUT_AXIS_TLAST),
+      .INPUT_AXIS_TVALID(INPUT_AXIS_TVALID),
+      .INPUT_AXIS_TREADY(in_tready[0]),
+                        
+      .OUTPUT_AXIS_TDATA(outbuf[0]),
+      .OUTPUT_AXIS_TLAST(tlast[0]),
+      .OUTPUT_AXIS_TVALID(tvalid[0]),
+      .OUTPUT_AXIS_TREADY(tready[0]) 	
+
+    );
+    
+    
+    dot #(
+    .ROWS(ROWS),
+    .COLS((COLS/2))
+    
+    ) dot1 (
+
+    // AXI4-Stream Interface
+      .clk(clk),
+      .rst(rst),
+    
+
+      .weights(weights1),
+      
+    
+      .INPUT_AXIS_TDATA(INPUT_AXIS_TDATA),
+      .INPUT_AXIS_TLAST(INPUT_AXIS_TLAST),
+      .INPUT_AXIS_TVALID(INPUT_AXIS_TVALID),
+      .INPUT_AXIS_TREADY(in_tready[1]),
+                        
+      .OUTPUT_AXIS_TDATA(outbuf[1]),
+      .OUTPUT_AXIS_TLAST(tlast[1]),
+      .OUTPUT_AXIS_TVALID(tvalid[1]),
+      .OUTPUT_AXIS_TREADY(tready[1]) 	
+
+    );
+    
+    
+     
+    always_ff@ (posedge clk) begin
+        j<= next_j;
+        n<=next_n;
+        state<=next_state;
+//        for (int i=0; i<COLS/2; i++)
+//            outbuf[i] <=  next_outbuf[i];
+        if(rst) begin
+            for(int i = 0; i<2; i++)
+                outbuf[i] <= '{default:32'h0};
+            j<=0;
+            n<=0;
         end
+//        end else if (tvalid[n]) begin
+//             outbuf[n];
+//        end 
+    end
+    
+    always_comb begin
+        next_j = j;
+        next_n = n;
+        next_state = state;
+        both_ready = 1'h1;
+        INPUT_AXIS_TREADY = 'h0;
         
-        dot #(
-        .ROWS(ROWS),
-        .COLS((COLS/2))
+        OUTPUT_AXIS_TDATA = outbuf[n];
+        OUTPUT_AXIS_TLAST = 'h0;
+        OUTPUT_AXIS_TVALID = 'h0;
+        for(int i = 0; i<2; i++) begin
+            tready[i] = 1'h0;
+         end   
+            
+        case(state)
         
-        ) dot0 (
-    
-		// AXI4-Stream Interface
-		  .clk(clk),
-		  .rst(rst),
-		
-//		  .MATRIX_NUM(2),
-		  .weights0(weights0),
-		  .weights1(weights1),
-		
-          .INPUT_AXIS_TDATA(INPUT_AXIS_TDATA),
-          .INPUT_AXIS_TLAST(INPUT_AXIS_TLAST),
-          .INPUT_AXIS_TVALID(INPUT_AXIS_TVALID),
-          .INPUT_AXIS_TREADY(INPUT_AXIS_TREADY),
-                            
-          .OUTPUT_AXIS_TDATA(OUTPUT_AXIS_TDATA),
-          .OUTPUT_AXIS_TLAST(OUTPUT_AXIS_TLAST),
-          .OUTPUT_AXIS_TVALID(OUTPUT_AXIS_TVALID),
-          .OUTPUT_AXIS_TREADY(OUTPUT_AXIS_TREADY) 	
-
-        );
-//    end
-    //if you want to cut the weights in half vertically
-    
-    
-   
+            ST_IDLE: begin
+                for (int i = 0; i<2; i++)
+                    both_ready &= in_tready[i];
+                if(both_ready)
+                    INPUT_AXIS_TREADY = 1'h1;
+                next_n = 0;
+                next_j = 0;
+                if(tvalid[n]) begin
+                        OUTPUT_AXIS_TVALID = 1'h1;                        
+                        tready[n] = 1'h1;
+                        next_state = ST_OUTPUT;
+                    
+                    
+                end
+            
+            end
+            
+            ST_OUTPUT: begin
+                OUTPUT_AXIS_TVALID = 1'h1;
+                
+                
+                if(tvalid[n]) begin
+                    if(OUTPUT_AXIS_TREADY) begin
+                        tready[n] = 1'h1;
+                        if(tlast[n]) begin
+                           next_n = n+1;
+//                           next_state = ST_IDLE;
+                           if(n == 2-1) begin
+                                next_state = ST_IDLE;
+                                next_n = 0;
+                                OUTPUT_AXIS_TLAST = 1'h1;
+                              
+                            end else begin                           
+                                next_state = ST_OUTPUT;
+                         
+                            end
+                         end
+                    end
+                end
+              end
+              
+            
+      endcase
+    end
     //if you want to cut the weights in half horizontally
     // This does every-other row horizontally
     //genvar i;
@@ -129,7 +208,7 @@ module accel_dot #(
     //    assign weights0[i] = weights[i*2];
     //    assign weights0[i] = weights[i*2+1];
     //end
-    
+
     
     
 
