@@ -263,7 +263,7 @@ always_ff@(posedge clk) begin
 
     // this waits until the FPU gives a valid result
     // then stores it back into the outputs buffer
-//    end else if(next_state == ST_OUTPUT) begin
+//    end else if(state == ST_OUTPUT && rx_done) begin
 //        outputs[rxi] <= fmac_tdata;
 //        rxi <= rxi;
 //        rxj <= rxj;
@@ -273,8 +273,6 @@ always_ff@(posedge clk) begin
         rxj <= ( rxi < COLS -1 ? rxj :
                     (rxj < ROWS - 1 ? rxj + 1 :
                                     0 ));
-        
-          
     end
 end
 
@@ -282,4 +280,3 @@ end
 assign rx_done = fmac_tvalid && (rxi == COLS - 1) && (rxj == ROWS -1);
 
 endmodule
-
